@@ -1,3 +1,4 @@
+import { EmailTaken } from './validators/email-taken';
 import { SharedModule } from './../shared/shared.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -11,5 +12,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   declarations: [AuthModalComponent, LoginComponent, RegisterComponent],
   imports: [CommonModule, SharedModule, ReactiveFormsModule, FormsModule],
   exports: [AuthModalComponent],
+  providers: [EmailTaken],
 })
 export class UserModule {}

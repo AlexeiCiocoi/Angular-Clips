@@ -24,4 +24,10 @@
   <p class="text-red-400" *ngIf="control.errors.email">Invalid Email</p>
   <p class="text-red-400" *ngIf="control.errors.min">Value is to low</p>
   <p class="text-red-400" *ngIf="control.errors.max">Value is to hight</p>
+  <p class="text-red-400" *ngIf="control.errors.noMatch">
+    Passwords do not match
+  </p>
+  <p class="text-red-400" *ngIf="control.errors.emailTaken">
+   Email already in , please try another one
+  </p>
 </ng-container>

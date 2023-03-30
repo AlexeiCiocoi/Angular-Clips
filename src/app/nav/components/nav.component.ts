@@ -1,5 +1,7 @@
+import { AuthService } from './../../services/auth/auth.service';
 import { Component } from '@angular/core';
 import { ModalService } from 'src/app/services/modal.service';
+
 
 @Component({
   selector: 'app-nav',
@@ -7,10 +9,13 @@ import { ModalService } from 'src/app/services/modal.service';
   styleUrls: ['./nav.component.scss'],
 })
 export class NavComponent {
-  constructor(public modalService: ModalService) {}
+  isAuthenticated: boolean = false;
+
+  constructor(public modalService: ModalService, public auth: AuthService ) {}
 
   openModal($event: Event): void {
     $event.preventDefault();
     this.modalService.modalToggle('auth');
   }
+
 }
